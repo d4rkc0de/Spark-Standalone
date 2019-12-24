@@ -13,7 +13,6 @@ public class Main {
 
         SparkSession session = SparkSession.builder().appName("spark-standalone").config("spark.master", "local")
                 .getOrCreate();
-        session.sparkContext().setLogLevel("ERROR");
 
         Spark spark = new Spark();
         spark.run(session);
